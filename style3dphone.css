@@ -64,11 +64,7 @@ h1 {
 }
 .phone .front .depthLayer {
   background: #ffb13b;
-  background: -moz-linear-gradient(-45deg, #ffb13b 0%, #ffb13b 62%, #b64a26 68.5%, #b64a26 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #ffb13b), color-stop(62%, #ffb13b), color-stop(68.5%, #b64a26), color-stop(100%, #b64a26));
-  background: -webkit-linear-gradient(-45deg, #ffb13b 0%, #ffb13b 62%, #b64a26 68.5%, #b64a26 100%);
-  background: -o-linear-gradient(-45deg, #ffb13b 0%, #ffb13b 62%, #b64a26 68.5%, #b64a26 100%);
-  background: -ms-linear-gradient(-45deg, #ffb13b 0%, #ffb13b 62%, #b64a26 68.5%, #b64a26 100%);
   background: linear-gradient(135deg, #ffb13b 0%, #ffb13b 62%, #b64a26 68.5%, #b64a26 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffb13b", endColorstr="#b64a26", GradientType=1 );
   width: 100%;
@@ -99,14 +95,10 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: #FFF0A5;
-  background: rgb(19, 77, 67);
+  background: #134d43;
   overflow: hidden;
-  background: -moz-linear-gradient(45deg, rgb(19, 77, 67) 0%, rgb(11, 42, 66) 41%, rgb(5, 34, 56) 73%, rgb(28, 39, 54) 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgb(19, 77, 67)), color-stop(41%, rgb(11, 42, 66)), color-stop(73%, rgb(5, 34, 56)), color-stop(100%, rgb(28, 39, 54)));
-  background: -webkit-linear-gradient(45deg, rgb(19, 77, 67) 0%, rgb(11, 42, 66) 41%, rgb(5, 34, 56) 73%, rgb(28, 39, 54) 100%);
-  background: -o-linear-gradient(45deg, rgb(19, 77, 67) 0%, rgb(11, 42, 66) 41%, rgb(5, 34, 56) 73%, rgb(28, 39, 54) 100%);
-  background: -ms-linear-gradient(45deg, rgb(19, 77, 67) 0%, rgb(11, 42, 66) 41%, rgb(5, 34, 56) 73%, rgb(28, 39, 54) 100%);
-  background: linear-gradient(45deg, rgb(19, 77, 67) 0%, rgb(11, 42, 66) 41%, rgb(5, 34, 56) 73%, rgb(28, 39, 54) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #134d43), color-stop(41%, #0b2a42), color-stop(73%, #052238), color-stop(100%, #1c2736));
+  background: linear-gradient(45deg, #134d43 0%, #0b2a42 41%, #052238 73%, #1c2736 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#134d43", endColorstr="#1c2736", GradientType=1 );
 }
 .phone .front .screen:before {
@@ -265,7 +257,5 @@ h1 {
   border-radius: 9999px;
   background: rgba(12, 23, 17, 0.6);
   border: solid 2px #0c1711;
-  box-shadow: inset -4px 7px 6px -2px rgb(0, 0, 0);
+  box-shadow: inset -4px 7px 6px -2px black;
 }
-
-/*# sourceMappingURL=style.css.map */
