@@ -1,0 +1,50 @@
+{
+  "users": [
+    { "id": 1, "name": "omarrr", "age": 25 },
+    { "id": 2, "name": "lotfi", "age": 30 }
+  ],
+  "products": [
+    {
+      "name": "Galaxy S23",
+      "category": "Phone",
+      "price": 999,
+      "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
+    },
+    {
+      "name": "iPhone 15",
+      "category": "Phone",
+      "price": 1099,
+      "image": "https://www.zdnet.com/a/img/resize/0258ce846d7b24064837b16a38756b526188dad1/2024/09/22/5404cdba-d88c-4f1b-982c-76197d0edf08/iphone-16-pro-apple-store-mall.jpg?auto=webp&fit=crop&height=1200&width=1200"
+    },
+    {
+      "name": "Pixel 8",
+      "category": "Phone",
+      "price": 899,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/google-pixel-8-pro-lead-jpg-66aded713e801.jpg?crop=0.666875xw:1xh;center,top&resize=640:*"
+    },
+    {
+      "name": "Galaxy S23",
+      "category": "Phone",
+      "price": 999,
+      "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
+    },
+    {
+      "name": "iPhone 15",
+      "category": "Phone",
+      "price": 1099,
+      "image": "https://www.zdnet.com/a/img/resize/0258ce846d7b24064837b16a38756b526188dad1/2024/09/22/5404cdba-d88c-4f1b-982c-76197d0edf08/iphone-16-pro-apple-store-mall.jpg?auto=webp&fit=crop&height=1200&width=1200"
+    },
+    {
+      "name": "Pixel 8",
+      "category": "Phone",
+      "price": 899,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/google-pixel-8-pro-lead-jpg-66aded713e801.jpg?crop=0.666875xw:1xh;center,top&resize=640:*"
+    },
+    {
+      "name": "Pixel 8",
+      "category": "Phone",
+      "price": 899,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/google-pixel-8-pro-lead-jpg-66aded713e801.jpg?crop=0.666875xw:1xh;center,top&resize=640:*"
+    }
+  ]
+}
