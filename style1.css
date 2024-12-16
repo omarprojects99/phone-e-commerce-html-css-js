@@ -21,3 +21,14 @@ body {
 .carousel-control-prev-icon, .carousel-control-next-icon {
     filter: invert(1);
 }
+.carousel-item img {
+    object-fit: cover;
+    height: 60vh; /* Adjust height for mobile */
+    max-height: 700px; /* Prevent images from being too tall on larger screens */
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 40vh; /* Smaller height for mobile */
+    }
+}
