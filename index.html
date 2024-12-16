@@ -1,288 +1,60 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css.map">
-  <link rel="stylesheet" href="style.scss">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:100,200,300"'><link rel="stylesheet" href="./style3dphone.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
- 
-  <!-- <div class="bg-white" style="background-color: #0f172a;"> -->
-  <div class="bg-white" style="background-color: #e1e6f1;">
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
-          <a href="index.html" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="size-11" src="https://cdn-icons-png.flaticon.com/512/8539/8539259.png" alt="">
-          </a>
-        </div>
-        <div class="flex lg:hidden">
-          <button
-            id="mobile-menu-open"
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a href="produit.html" class="text-sm/6 font-semibold text-black" >Product</a>
-          <a href="#" class="text-sm/6 font-semibold text-black">Features</a>
-          <a href="produit.html" class="text-sm/6 font-semibold  text-black">Marketplace</a>
-          <a href="Contact.html" class="text-sm/6 font-semibold text-black ">Contact</a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="connexion.html" class="text-sm/6 font-semibold  text-black">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a class="navbar-brand" href="#">Navbar</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="produit.html">Produits</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">connexion</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button  class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
       </nav>
-      <div
-        id="mobile-menu"
-        class="hidden fixed inset-0 z-50 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-        role="dialog"
-        aria-modal="true"
-      >
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-          </a>
-          <button
-            id="mobile-menu-close"
-            type="button"
-            class="-m-2.5 rounded-md p-2.5 text-gray-700"
-          >
-            <span class="sr-only">Close menu</span>
-            <svg
-              class="size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a href="produit.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-              <a href="produit.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-              <a href="Contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
-            </div>
-            <div class="py-6">
-              <a href="connexion.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
-            </div>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/ccbb843592e8702f20fe_S24-FE-1920X700.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item ">
+            <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/f9da64b56ca7d43dcfe5_Serie-S24-1920X700.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/dc6b704f5d73470b1ae2_slider-lave-linge-1920x700.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </header>
-    <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px;">
-      <!-- Text Content Section -->
-      <div class="wrapper" style="flex: 1; padding: 20px;margin-top: 15%;">
-        <div class="text-center">
-          <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-            Explore the Latest Tech: Phones That Redefine Innovation
-          </h1>
-          <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-            Experience the Future of Phones: Unmatched Quality and Performance
-            Explore the latest in smartphone technology with exceptional features and designs.
-            Whether you're after power, performance, or style, these phones set a new standard.
-          </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-            <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
-          </div>
-        </div>
-      </div>
-      <!-- Phone Section -->
-      <div class="wrapper" style="flex: 1; display: flex; justify-content: center;padding-top: 7%;margin-left: 16%;position: relative;">
-        <div class="phone" viewport="375 812" viewport-border="40" device="413 850 44" border="60" depth="53" depth-layers="84">   
-          <div class="pside front">
-            <div class="back"></div>
-            <div class="layerZero">
-              <div class="topSpace">
-                <div class="earpiece"></div>
-                <div class="camera"></div>
-              </div>
-              <div class="screen">
-                <div class="clock">13:22</div>
-              </div>
-            </div>
-          </div>
-          <div class="pside leftSide">
-            <div class="sidebottom"></div>
-            <div class="card"></div>
-          </div>
-          <div class="pside bottom">
-            <div class="speaker sp1">
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-            </div>
-            <div class="conector"></div>
-            <div class="speaker sp2">
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-              <div class="spDot"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  <!-- bento grid -->
-  <div class=" py-24 sm:py-32" style="background-color: #e1e6f1;">
-    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-center text-base/7 font-semibold text-indigo-600">mobile selling</h2>
-      <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Explore the Latest Tech: Phones That Redefine Innovation</p>
-      <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-        <div class="relative lg:row-span-2">
-          <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-            <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Mobile friendly</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</p>
-            </div>
-            <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-              <div class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                <img class="size-full object-cover object-top" src="https://d30wkz0ptv5pwh.cloudfront.net/media/magefan_blog/mobile_phone.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
-        </div>
-        <div class="relative max-lg:row-start-1">
-          <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">smartphone</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Explore the Latest Tech: Phones That Redefine Innovation</p>
-            </div>
-            <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-              <img class="w-full max-lg:max-w-xs" src="https://cdn.mos.cms.futurecdn.net/AVEcca7TuDmt8wjaFZPkzj-320-80.jpg" alt="">
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
-        </div>
-        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-          <div class="absolute inset-px rounded-lg bg-white"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">smartphone</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Explore the Latest Tech: Phones That Redefine Innovation</p>
-            </div>
-            <div class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-              <img class="h-[min(152px,40cqw)] object-cover" src="https://www.washingtonpost.com/resizer/cMf6zQVMI0gIqd4fVXZ7JRyhNZA=/arc-anglerfish-washpost-prod-washpost/public/OJJRFWRXHJUXGZ47ED7KPNRDXU.JPG" alt="">
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
-        </div>
-        <div class="relative lg:row-span-2">
-          <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-            <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Smart phone</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Explore the Latest Tech: Phones That Redefine Innovation</p>
-            </div>
-            <div class="relative min-h-[30rem] w-full grow">
-              <div class="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
-                <div class="flex bg-gray-800/40 ring-1 ring-white/5">
-                  <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
-                    <div class="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">Tablette</div>
-                    <div class="border-r border-gray-600/10 px-4 py-2">Smart phone</div>
-                  </div>
-                </div>
-                <div class="px-6 pb-14 pt-6">
-                  <!-- Your code example -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- about us -->
-  <div class=" py-24 sm:py-32" style="background-color: #f0f2f7;">
-  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-    
-    <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-      <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-    <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-      <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Buy from us</h2>
-        <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">Explore the Latest Tech: Phones That Redefine Innovation</p>
-      </div>
-      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-          <a href="#">lien  <span aria-hidden="true">&rarr;</span></a>
-          <a href="#">link <span aria-hidden="true">&rarr;</span></a>
-          <a href="#">link <span aria-hidden="true">&rarr;</span></a>
-          <a href="#">link <span aria-hidden="true">&rarr;</span></a>
-        </div>
-        <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-base/7 text-gray-300">Point de vente</dt>
-            <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
-          </div>
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-base/7 text-gray-300">smartphone vendu</dt>
-            <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
-          </div>
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-base/7 text-gray-300">tablette vendu</dt>
-            <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
-          </div>
-          <div class="flex flex-col-reverse gap-1">
-            <dt class="text-base/7 text-gray-300">;;;;;;;;;;;;;</dt>
-            <dd class="text-4xl font-semibold tracking-tight text-white">;;;;;;</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </div>
-  
-  
-  <!-- test section  -->
- 
-  
-  <!-- contact section 
-   -->
-  
-   
-  
 </body>
 
-<script src="scriptIndex.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./scriptPhone.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
