@@ -102,49 +102,49 @@ fetch("data.json")
     });
   }
   
-  // Call the render function to display the products
+
   renderProducts();
   document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent form submission to check values first
+    event.preventDefault();  
 
-    // Get the input values
+    
     const email = document.getElementById("exampleInputEmail1").value;
     const password = document.getElementById("exampleInputPassword1").value;
     const termsChecked = document.getElementById("exampleCheck1").checked;
 
-    // Error message div
+    
     const errorMessage = document.getElementById("errorMessage");
 
-    // Reset error message
+    
     errorMessage.style.display = "none";
 
-    // Validate input fields
+   
     if (!email || !password || !termsChecked) {
-        // Show error message if any input is missing or checkbox is not checked
+        
         errorMessage.style.display = "block";
         return;
     }
 
-    // Check email format
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert("Please enter a valid email address.");
         return;
     }
 
-    // Proceed if validation is successful
+    
     alert("Form submitted successfully!");
 });
 document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Empêche l'envoi du formulaire
+    event.preventDefault(); 
 
-    // Récupération des valeurs des champs
+    
     const nom = document.getElementById('exampleInputNom').value.trim();
     const email = document.getElementById('exampleInputEmail1').value.trim();
     const password = document.getElementById('exampleInputPassword1').value.trim();
     const terms = document.getElementById('exampleCheck1').checked;
 
-    // Réinitialisation des messages d'erreur
+   
     document.getElementById('nomError').style.display = 'none';
     document.getElementById('emailError').style.display = 'none';
     document.getElementById('passwordError').style.display = 'none';
@@ -152,35 +152,35 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
     let isValid = true;
 
-    // Validation du champ "Nom"
+
     if (nom === '') {
         document.getElementById('nomError').textContent = 'Veuillez entrer un nom valide.';
         document.getElementById('nomError').style.display = 'block';
         isValid = false;
     }
 
-    // Validation du champ "Email"
+
     if (email === '' || !/^\S+@\S+\.\S+$/.test(email)) {
         document.getElementById('emailError').textContent = 'Veuillez entrer une adresse email valide.';
         document.getElementById('emailError').style.display = 'block';
         isValid = false;
     }
 
-    // Validation du champ "Password"
+
     if (password === '' || password.length < 6) {
         document.getElementById('passwordError').textContent = 'Le mot de passe doit comporter au moins 6 caractères.';
         document.getElementById('passwordError').style.display = 'block';
         isValid = false;
     }
 
-    // Validation de l'acceptation des termes
+
     if (!terms) {
         document.getElementById('termsError').textContent = 'Vous devez accepter les termes.';
         document.getElementById('termsError').style.display = 'block';
         isValid = false;
     }
 
-    // Si tous les champs sont valides, soumission du formulaire
+  
     if (isValid) {
         alert('Formulaire soumis avec succès!');
         this.submit();
