@@ -5,7 +5,7 @@ const bxMenu = document.querySelector('.bx-menu');
 const bxX = document.querySelector('.bx-x');
 const navBar = document.querySelector('.navbar');
 
-// --- open menu ---
+
 bxMenu.addEventListener('click', (e) => {
     if (e.target.classList.contains('bx-menu')) {
         navBar.classList.add('show-navbar');
@@ -14,7 +14,7 @@ bxMenu.addEventListener('click', (e) => {
     }
 });
 
-// --- close menu ---
+
 bxX.addEventListener('click', (e) => {
     if (e.target.classList.contains('bx-x')) {
         navBar.classList.remove('show-navbar');
@@ -44,7 +44,7 @@ function renderProducts(products) {
     });
 }
 
-// Handle color circle filter
+
 document.querySelectorAll(".color-circle").forEach(circle => {
     circle.addEventListener("click", () => {
         const color = circle.getAttribute("data-color");
@@ -75,35 +75,7 @@ fetch("data.json")
 // You can fetch it from a separate JSON file or use it as is.
 
 // Example JSON data (replace this with the actual data or use a fetch call to get the JSON file)
-const data = {
-    "products": [
-      {
-        "name": "Galaxy S23",
-        "category": "Galaxy Z",
-        "price": 999,
-        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
-      },
-      {
-        "name": "Galaxy S23",
-        "category": "Galaxy Note",
-        "price": 999,
-        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
-      },
-      {
-        "name": "Galaxy S23",
-        "category": "Galaxy S",
-        "price": 999,
-        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
-      },
-      {
-        "name": "Galaxy S23",
-        "category": "Galaxy A",
-        "price": 999,
-        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
-      }
-    ]
-  };
-  
+
   // Function to render the products dynamically
   function renderProducts() {
     const productList = document.getElementById('product-list');
@@ -132,4 +104,85 @@ const data = {
   
   // Call the render function to display the products
   renderProducts();
-  
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent form submission to check values first
+
+    // Get the input values
+    const email = document.getElementById("exampleInputEmail1").value;
+    const password = document.getElementById("exampleInputPassword1").value;
+    const termsChecked = document.getElementById("exampleCheck1").checked;
+
+    // Error message div
+    const errorMessage = document.getElementById("errorMessage");
+
+    // Reset error message
+    errorMessage.style.display = "none";
+
+    // Validate input fields
+    if (!email || !password || !termsChecked) {
+        // Show error message if any input is missing or checkbox is not checked
+        errorMessage.style.display = "block";
+        return;
+    }
+
+    // Check email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Proceed if validation is successful
+    alert("Form submitted successfully!");
+});
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire
+
+    // Récupération des valeurs des champs
+    const nom = document.getElementById('exampleInputNom').value.trim();
+    const email = document.getElementById('exampleInputEmail1').value.trim();
+    const password = document.getElementById('exampleInputPassword1').value.trim();
+    const terms = document.getElementById('exampleCheck1').checked;
+
+    // Réinitialisation des messages d'erreur
+    document.getElementById('nomError').style.display = 'none';
+    document.getElementById('emailError').style.display = 'none';
+    document.getElementById('passwordError').style.display = 'none';
+    document.getElementById('termsError').style.display = 'none';
+
+    let isValid = true;
+
+    // Validation du champ "Nom"
+    if (nom === '') {
+        document.getElementById('nomError').textContent = 'Veuillez entrer un nom valide.';
+        document.getElementById('nomError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Validation du champ "Email"
+    if (email === '' || !/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById('emailError').textContent = 'Veuillez entrer une adresse email valide.';
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Validation du champ "Password"
+    if (password === '' || password.length < 6) {
+        document.getElementById('passwordError').textContent = 'Le mot de passe doit comporter au moins 6 caractères.';
+        document.getElementById('passwordError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Validation de l'acceptation des termes
+    if (!terms) {
+        document.getElementById('termsError').textContent = 'Vous devez accepter les termes.';
+        document.getElementById('termsError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Si tous les champs sont valides, soumission du formulaire
+    if (isValid) {
+        alert('Formulaire soumis avec succès!');
+        this.submit();
+    }
+});
