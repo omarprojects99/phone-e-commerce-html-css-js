@@ -29,7 +29,7 @@
                         <a class="nav-link active" aria-current="page" href="produit.html">Produits</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">connexion</a>
+                        <a  href="connexion.html" class="nav-link active" aria-disabled="true">connexion</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -110,46 +110,127 @@
               <div class="container mt-5">
                   <div class="row">
                       <!-- Filter Section -->
-                      <div class="col-md-4">
-                        <div class="filter-section">
-                            <h3 style="text-align: center;" class="roboto-light">Filtre</h3>
-                            <!-- Dropdown with checkboxes -->
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Select Filters
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="filterDropdown">
-                                    <li>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Galaxy Z" id="filterGalaxyZ">
-                                            <label class="form-check-label" for="filterGalaxyZ">
-                                                Galaxy Z
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Galaxy S" id="filterGalaxyS">
-                                            <label class="form-check-label" for="filterGalaxyS">
-                                                Galaxy S
-                                            </label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                    
-                            <!-- Color Filter Section -->
-                            <div class="mt-4">
-                                <h5 style="text-align: center;">Filter by Color</h5>
-                                <div class="d-flex justify-content-center gap-2">
-                                    <!-- Add color filter circles -->
-                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: red; border-radius: 50%; cursor: pointer;" data-color="Red"></div>
-                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: blue; border-radius: 50%; cursor: pointer;" data-color="Blue"></div>
-                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: green; border-radius: 50%; cursor: pointer;" data-color="Green"></div>
-                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: black; border-radius: 50%; cursor: pointer;" data-color="Black"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+<div class="col-md-4">
+  <div class="filter-section">
+      <h3 style="text-align: center;" class="roboto-light">Filtre</h3>
+      
+      <!-- Dropdown with checkboxes (Categories) -->
+      <div class="dropdown mb-4">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Select Filters
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+              <li>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Galaxy Z" id="filterGalaxyZ">
+                      <label class="form-check-label" for="filterGalaxyZ">
+                          Galaxy Z
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Galaxy S" id="filterGalaxyS">
+                      <label class="form-check-label" for="filterGalaxyS">
+                          Galaxy S
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Galaxy A" id="filterGalaxyA">
+                      <label class="form-check-label" for="filterGalaxyA">
+                          Galaxy A
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Galaxy Note" id="filterGalaxyNote">
+                      <label class="form-check-label" for="filterGalaxyNote">
+                          Galaxy Note
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Nouveautés" id="filterNouveautes">
+                      <label class="form-check-label" for="filterNouveautes">
+                          Nouveautés
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Promotion" id="filterPromotion">
+                      <label class="form-check-label" for="filterPromotion">
+                          Promotion
+                      </label>
+                  </div>
+              </li>
+          </ul>
+      </div>
+
+      <!-- Price Filter Section -->
+      <div class="mt-4">
+          <h5 style="text-align: center;">Prix</h5>
+          <input type="range" class="form-range" min="399" max="7999" id="priceRange" step="100">
+          <div class="d-flex justify-content-between">
+              <span>399 TND</span>
+              <span>7999 TND</span>
+          </div>
+      </div>
+
+      <!-- Color Filter Section -->
+      <div class="mt-4">
+          <h5 style="text-align: center;">Filter by Color</h5>
+          <div class="d-flex justify-content-center gap-2">
+              <div class="color-circle" style="width: 30px; height: 30px; background-color: red; border-radius: 50%; cursor: pointer;" data-color="Red"></div>
+              <div class="color-circle" style="width: 30px; height: 30px; background-color: blue; border-radius: 50%; cursor: pointer;" data-color="Blue"></div>
+              <div class="color-circle" style="width: 30px; height: 30px; background-color: green; border-radius: 50%; cursor: pointer;" data-color="Green"></div>
+              <div class="color-circle" style="width: 30px; height: 30px; background-color: black; border-radius: 50%; cursor: pointer;" data-color="Black"></div>
+          </div>
+      </div>
+
+      <!-- Screen Size Filter Section -->
+      <div class="mt-4">
+          <h5 style="text-align: center;">Taille de l'écran</h5>
+          <div class="d-flex justify-content-center gap-2">
+              
+              <button class="btn btn-outline-primary btn-sm">6.5"</button>
+              <button class="btn btn-outline-primary btn-sm">6.6"</button>
+              <button class="btn btn-outline-primary btn-sm">6.7"</button>
+              <button class="btn btn-outline-primary btn-sm">6.8"</button>
+              <button class="btn btn-outline-primary btn-sm">6.9"</button>
+              <button class="btn btn-outline-primary btn-sm">7.6"</button>
+          </div>
+      </div>
+
+      <!-- Storage Filter Section -->
+      <div class="mt-4">
+          <h5 style="text-align: center;">Stockage</h5>
+          <div class="d-flex justify-content-center gap-2">
+              <button class="btn btn-outline-primary btn-sm">128 Go</button>
+              <button class="btn btn-outline-primary btn-sm">256 Go</button>
+              <button class="btn btn-outline-primary btn-sm">32 Go</button>
+              <button class="btn btn-outline-primary btn-sm">512 Go</button>
+              <button class="btn btn-outline-primary btn-sm">64 Go</button>
+          </div>
+      </div>
+
+      <!-- Refresh Rate Filter Section -->
+      <div class="mt-4">
+          <h5 style="text-align: center;">Taux de rafraîchissement</h5>
+          <div class="d-flex justify-content-center gap-2">
+              <button class="btn btn-outline-primary btn-sm">120 Hz</button>
+              <button class="btn btn-outline-primary btn-sm">120 Hz</button>
+              <button class="btn btn-outline-primary btn-sm">120 Hz</button>
+          </div>
+      </div>
+
+      <!-- Series Filter Section -->
+      <div class="mt-4">
+          <h5 style="text-align: center;">Séries</h5>
+          <div class="d-flex justify-content-center gap-2">
+              <button class="btn btn-outline-primary btn-sm">Série FE</button>
+              <button class="btn btn-outline-primary btn-sm">Série FE</button>
+              <button class="btn btn-outline-primary btn-sm">Série FE</button>
+          </div>
+      </div>
+
+  </div>
+</div>
+
           
                       <!-- Product Section -->
                       <div class="col-md-8">

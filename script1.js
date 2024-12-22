@@ -70,3 +70,4 @@ fetch("data.json")
         renderProducts(products);
     })
     .catch(error => console.error("Error loading JSON data:", error));
+    

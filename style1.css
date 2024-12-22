@@ -89,3 +89,92 @@ body {
 .card {
     margin-bottom: 20px;
 }
+/* Basic Styles for Filters */
+.filter-section {
+    padding: 20px;
+}
+
+/* Make sure the filter buttons are aligned nicely on smaller screens */
+@media (max-width: 768px) {
+    .filter-section {
+        padding: 15px;
+    }
+
+    .color-circle {
+        width: 25px;
+        height: 25px;
+    }
+
+    .d-flex.justify-content-center.gap-2 {
+        flex-wrap: wrap;
+    }
+
+    .d-flex.justify-content-center.gap-2 .btn {
+        margin-bottom: 5px;
+    }
+    
+    /* Stack the filters vertically on small screens */
+    .col-md-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    /* Ensure filter text and inputs take full width on smaller screens */
+    .form-check {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+
+    .btn-outline-primary {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    /* Adjusting price filter */
+    .form-range {
+        width: 100%;
+    }
+
+    /* Ensure card group does not overflow on small screens */
+    .card-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .filter-section {
+        padding: 15px;
+    }
+
+    .d-flex.justify-content-center.gap-2 {
+        flex-wrap: wrap;
+    }
+
+    .color-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .col-md-4 {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .btn-outline-primary {
+        width: 48%;
+        margin-bottom: 5px;
+    }
+}
