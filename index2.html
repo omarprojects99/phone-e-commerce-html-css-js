@@ -7,93 +7,214 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style1.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-   
+    <style>
+        hr.custom-hr {
+            border: 0;
+            height: 1px;
+            background-color: #d3d3d3; /* Light gray color */
+            margin: 20px 0; /* Add spacing around the line */
+        }
+    </style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">Navbar</a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="produit.html">Produits</a>
-              </li>
-            
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">connexion</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button  class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="produit.html">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">connexion</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-      </nav>
-      <div id="carouselExample" class="carousel slide">
+    </nav>
+
+    <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/ccbb843592e8702f20fe_S24-FE-1920X700.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item ">
-            <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/f9da64b56ca7d43dcfe5_Serie-S24-1920X700.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/dc6b704f5d73470b1ae2_slider-lave-linge-1920x700.jpg" class="d-block w-100" alt="...">
-          </div>
+            <div class="carousel-item active">
+                <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/ccbb843592e8702f20fe_S24-FE-1920X700.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/f9da64b56ca7d43dcfe5_Serie-S24-1920X700.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.samsungshop.tn/modules/tvcmsslider/views/img/dc6b704f5d73470b1ae2_slider-lave-linge-1920x700.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
-      <h1 style="text-align: center;">selectionnez une categorie</h1>
-      <div class="card-group">
-        <div class="card">
-          <img src="https://www.samsungshop.tn/img/c/27-1_thumb.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">tlf1</h5>
-            </div>
-        </div>
-        <div class="card">
-          <img src="https://www.samsungshop.tn/img/c/30-1_thumb.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">tlf2</h5>
-            </div>
-        </div>
-        <div class="card">
-          <img src="https://www.samsungshop.tn/img/c/28-1_thumb.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">tlf3</h5>
-            
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://www.samsungshop.tn/img/c/30-1_thumb.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">tlfoun4</h5>
-            
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://www.samsungshop.tn/img/c/46-1_thumb.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">tlf5e</h5>
-            
-          </div>
-        </div>
-     
     </div>
+
+    <!-- Add horizontal line -->
+    <hr class="custom-hr">
+
+    <h1 style="text-align: center;">Sélectionnez une catégorie</h1>
+
+    <div class="card-group">
+        <div class="card">
+            <img src="https://www.samsungshop.tn/img/c/27-1_thumb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Galaxy Z</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.samsungshop.tn/img/c/30-1_thumb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Galaxy S</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.samsungshop.tn/img/c/28-1_thumb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Galaxy Note</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.samsungshop.tn/img/c/30-1_thumb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Galaxy A</h5>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.samsungshop.tn/img/c/46-1_thumb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Nouveautés</h5>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center;" class="roboto-light">Accueil / Smartphone</h1>
+    
+    
+
+
+
+
+    
+              <div class="container mt-5">
+                  <div class="row">
+                      <!-- Filter Section -->
+                      <div class="col-md-4">
+                        <div class="filter-section">
+                            <h3 style="text-align: center;" class="roboto-light">Filtre</h3>
+                            <!-- Dropdown with checkboxes -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Select Filters
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Galaxy Z" id="filterGalaxyZ">
+                                            <label class="form-check-label" for="filterGalaxyZ">
+                                                Galaxy Z
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Galaxy S" id="filterGalaxyS">
+                                            <label class="form-check-label" for="filterGalaxyS">
+                                                Galaxy S
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                            <!-- Color Filter Section -->
+                            <div class="mt-4">
+                                <h5 style="text-align: center;">Filter by Color</h5>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <!-- Add color filter circles -->
+                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: red; border-radius: 50%; cursor: pointer;" data-color="Red"></div>
+                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: blue; border-radius: 50%; cursor: pointer;" data-color="Blue"></div>
+                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: green; border-radius: 50%; cursor: pointer;" data-color="Green"></div>
+                                    <div class="color-circle" style="width: 30px; height: 30px; background-color: black; border-radius: 50%; cursor: pointer;" data-color="Black"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+          
+                      <!-- Product Section -->
+                      <div class="col-md-8">
+                          <div class="row" id="productGrid">
+                              <!-- Dynamic Product Cards will be injected here -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <script>
+                  const productGrid = document.getElementById("productGrid");
+          
+                  // Function to render products dynamically
+                  function renderProducts(products) {
+                      productGrid.innerHTML = ""; // Clear existing products
+                      products.forEach(product => {
+                          const card = document.createElement("div");
+                          card.className = "col-md-4";
+                          card.innerHTML = `
+                              <div class="card">
+                                  <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                                  <div class="card-body">
+                                      <h5 class="card-title">${product.name}</h5>
+                                      <p class="card-text">Category: ${product.category}</p>
+                                      <p class="card-text">Price: $${product.price}</p>
+                                      
+                                  </div>
+                              </div>
+                          `;
+                          productGrid.appendChild(card);
+                      });
+                  }
+          
+                  // Fetch data from JSON file
+                  fetch("data.json")
+                      .then(response => response.json())
+                      .then(data => {
+                          const products = data.products;
+          
+                          // Initial render
+                          renderProducts(products);
+          
+                          // Filter functionality
+                          document.getElementById("filterPhone").addEventListener("change", (e) => {
+                              if (e.target.checked) {
+                                  const filteredProducts = products.filter(product => product.category === "Phone");
+                                  renderProducts(filteredProducts);
+                              } else {
+                                  renderProducts(products);
+                              }
+                          });
+                      })
+                      .catch(error => console.error("Error loading JSON data:", error));
+              </script>
+          
+        </div>
+    </div>
+
+
+    
+    
+
+
 </body>
-
+<script src="script1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </html>
