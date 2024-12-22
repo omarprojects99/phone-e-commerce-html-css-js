@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Fetch the JSON data
+
   fetch("data.json")
     .then((response) => {
       if (!response.ok) {
@@ -8,17 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((data) => {
-      displayProductCards(data.products); // Generate product cards
+      displayProductCards(data.products);
     })
     .catch((error) => console.error(error));
 });
 
-// Function to display product cards
+
 function displayProductCards(products) {
-  const productGrid = document.querySelector(".grid"); // Select the grid container
+  const productGrid = document.querySelector(".grid"); 
 
   products.forEach((product) => {
-    // Create the card HTML
+   
     const productCard = document.createElement("a");
     productCard.href = "Produitbdetail.html";
     productCard.className = "group";
@@ -29,7 +29,7 @@ function displayProductCards(products) {
       <p class="mt-1 text-lg font-medium text-gray-900">$${product.price}</p>
     `;
     
-    // Append the card to the grid container
+   
     productGrid.appendChild(productCard);
   });
   

@@ -55,7 +55,7 @@
         </button>
     </div>
 
-    <!-- Add horizontal line -->
+   
     <hr class="custom-hr">
 
     <h1 style="text-align: center;">Sélectionnez une catégorie</h1>
@@ -102,12 +102,12 @@
     
               <div class="container mt-5">
                   <div class="row">
-                      <!-- Filter Section -->
+                      
 <div class="col-md-4">
   <div class="filter-section">
       <h3 style="text-align: center;" class="roboto-light">Filtre</h3>
       
-      <!-- Dropdown with checkboxes (Categories) -->
+     
       <div class="dropdown mb-4">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               Select Filters
@@ -154,7 +154,7 @@
           </ul>
       </div>
 
-      <!-- Price Filter Section -->
+     
       <div class="mt-4">
           <h5 style="text-align: center;">Prix</h5>
           <input type="range" class="form-range" min="399" max="7999" id="priceRange" step="100">
@@ -164,8 +164,7 @@
           </div>
       </div>
 
-      <!-- Color Filter Section -->
-      <!-- Color Filter Section -->
+      
 <div class="mt-4">
   <h5 style="text-align: center;">Filter by Color</h5>
   <div class="d-flex justify-content-center gap-2">
@@ -177,7 +176,7 @@
 </div>
 
 
-      <!-- Screen Size Filter Section -->
+      
       <div class="mt-4">
           <h5 style="text-align: center;">Taille de l'écran</h5>
           <div class="d-flex justify-content-center gap-2">
@@ -191,7 +190,7 @@
           </div>
       </div>
 
-      <!-- Storage Filter Section -->
+     
       <div class="mt-4">
           <h5 style="text-align: center;">Stockage</h5>
           <div class="d-flex justify-content-center gap-2">
@@ -203,7 +202,7 @@
           </div>
       </div>
 
-      <!-- Refresh Rate Filter Section -->
+      
       <div class="mt-4">
           <h5 style="text-align: center;">Taux de rafraîchissement</h5>
           <div class="d-flex justify-content-center gap-2">
@@ -213,7 +212,7 @@
           </div>
       </div>
 
-      <!-- Series Filter Section -->
+      
       <div class="mt-4">
           <h5 style="text-align: center;">Séries</h5>
           <div class="d-flex justify-content-center gap-2">
@@ -227,10 +226,10 @@
 </div>
 
           
-                      <!-- Product Section -->
+                      
                       <div class="col-md-8">
                           <div class="row" id="productGrid">
-                              <!-- Dynamic Product Cards will be injected here -->
+                              
                           </div>
                       </div>
                   </div>
@@ -239,12 +238,12 @@
               <script>
                 const productGrid = document.getElementById("productGrid");
             
-                // Initial products data
+              
                 let products = [];
             
-                // Function to render products dynamically
+                
                 function renderProducts(filteredProducts) {
-                    productGrid.innerHTML = ""; // Clear existing products
+                    productGrid.innerHTML = ""; 
                     filteredProducts.forEach(product => {
                         const card = document.createElement("div");
                         card.className = "col-md-4";
@@ -263,53 +262,52 @@
                     });
                 }
             
-                // Function to apply all selected filters
+               
                 function applyFilters() {
                     let filteredProducts = products;
             
-                    // Filter by category
+                   
                     const selectedCategories = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
                     if (selectedCategories.length > 0) {
                         filteredProducts = filteredProducts.filter(product => selectedCategories.includes(product.category));
                     }
             
-                    // Filter by price
+                   
                     const priceRange = document.getElementById("priceRange");
                     const minPrice = parseInt(priceRange.min);
                     const maxPrice = parseInt(priceRange.max);
                     const priceValue = parseInt(priceRange.value);
                     filteredProducts = filteredProducts.filter(product => product.price >= minPrice && product.price <= priceValue);
             
-                    // Filter by color (optional, needs product data to have color info)
-                    // This example assumes the products have a `color` field.
+                   
                     const selectedColor = Array.from(document.querySelectorAll('.color-circle.active')).map(circle => circle.dataset.color);
                     if (selectedColor.length > 0) {
                         filteredProducts = filteredProducts.filter(product => selectedColor.includes(product.color));
                     }
             
-                    // Render the filtered products
+                    
                     renderProducts(filteredProducts);
                 }
             
-                // Fetch data from JSON file
+                
                 fetch("data.json")
                     .then(response => response.json())
                     .then(data => {
                         products = data.products;
             
-                        // Initial render
+                        
                         renderProducts(products);
             
-                        // Add event listeners for filters
+                       
                         document.querySelectorAll('input[type="checkbox"], #priceRange').forEach(input => {
                             input.addEventListener("change", applyFilters);
                         });
             
-                        // Handle color filter (click to toggle active class)
+                        
                         document.querySelectorAll('.color-circle').forEach(circle => {
                             circle.addEventListener("click", () => {
                                 circle.classList.toggle("active");
-                                applyFilters(); // Reapply filters when color is selected/deselected
+                                applyFilters(); 
                             });
                         });
                     })
