@@ -6,56 +6,65 @@
   "products": [
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy Z",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy Note",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
    
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy S",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy A",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy S",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy Note",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy A",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy Z",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     },
     {
       "name": "Galaxy S23",
-      "category": "Phone",
+      "category": "Galaxy S",
+      "color": "blue",
       "price": 999,
       "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
     }

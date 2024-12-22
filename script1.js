@@ -70,4 +70,66 @@ fetch("data.json")
         renderProducts(products);
     })
     .catch(error => console.error("Error loading JSON data:", error));
+
+// Assuming your JSON data is available in a file or directly in the script.
+// You can fetch it from a separate JSON file or use it as is.
+
+// Example JSON data (replace this with the actual data or use a fetch call to get the JSON file)
+const data = {
+    "products": [
+      {
+        "name": "Galaxy S23",
+        "category": "Galaxy Z",
+        "price": 999,
+        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
+      },
+      {
+        "name": "Galaxy S23",
+        "category": "Galaxy Note",
+        "price": 999,
+        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
+      },
+      {
+        "name": "Galaxy S23",
+        "category": "Galaxy S",
+        "price": 999,
+        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
+      },
+      {
+        "name": "Galaxy S23",
+        "category": "Galaxy A",
+        "price": 999,
+        "image": "https://www.notebookcheck.biz/fileadmin/Notebooks/News/_nc3/galaxy23ultra.jpeg"
+      }
+    ]
+  };
+  
+  // Function to render the products dynamically
+  function renderProducts() {
+    const productList = document.getElementById('product-list');
     
+    data.products.forEach(product => {
+      // Create a new product card
+      const productCard = document.createElement('div');
+      productCard.classList.add('col-md-4', 'mb-4');
+      
+      productCard.innerHTML = `
+        <div class="card">
+          <img src="${product.image}" class="card-img-top" alt="${product.name}">
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">Category: ${product.category}</p>
+            <p class="card-text">Price: $${product.price}</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      `;
+      
+      // Append the product card to the product list container
+      productList.appendChild(productCard);
+    });
+  }
+  
+  // Call the render function to display the products
+  renderProducts();
+  

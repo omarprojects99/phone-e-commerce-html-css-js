@@ -177,4 +177,11 @@ body {
         width: 48%;
         margin-bottom: 5px;
     }
+    
+}
+hr.custom-hr {
+    border: 0;
+    height: 1px;
+    background-color: #d3d3d3; 
+    margin: 20px 0; 
 }

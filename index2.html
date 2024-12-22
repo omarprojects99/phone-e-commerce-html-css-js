@@ -7,14 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style1.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        hr.custom-hr {
-            border: 0;
-            height: 1px;
-            background-color: #d3d3d3; /* Light gray color */
-            margin: 20px 0; /* Add spacing around the line */
-        }
-    </style>
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -26,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="produit.html">Produits</a>
+                        <a class="nav-link active" aria-current="page" href="registre.html">Produits</a>
                     </li>
                     <li class="nav-item">
                         <a  href="connexion.html" class="nav-link active" aria-disabled="true">connexion</a>
@@ -172,15 +165,17 @@
       </div>
 
       <!-- Color Filter Section -->
-      <div class="mt-4">
-          <h5 style="text-align: center;">Filter by Color</h5>
-          <div class="d-flex justify-content-center gap-2">
-              <div class="color-circle" style="width: 30px; height: 30px; background-color: red; border-radius: 50%; cursor: pointer;" data-color="Red"></div>
-              <div class="color-circle" style="width: 30px; height: 30px; background-color: blue; border-radius: 50%; cursor: pointer;" data-color="Blue"></div>
-              <div class="color-circle" style="width: 30px; height: 30px; background-color: green; border-radius: 50%; cursor: pointer;" data-color="Green"></div>
-              <div class="color-circle" style="width: 30px; height: 30px; background-color: black; border-radius: 50%; cursor: pointer;" data-color="Black"></div>
-          </div>
-      </div>
+      <!-- Color Filter Section -->
+<div class="mt-4">
+  <h5 style="text-align: center;">Filter by Color</h5>
+  <div class="d-flex justify-content-center gap-2">
+      <div class="color-circle" style="width: 30px; height: 30px; background-color: red; border-radius: 50%; cursor: pointer;" data-color="Red"></div>
+      <div class="color-circle" style="width: 30px; height: 30px; background-color: blue; border-radius: 50%; cursor: pointer;" data-color="Blue"></div>
+      <div class="color-circle" style="width: 30px; height: 30px; background-color: green; border-radius: 50%; cursor: pointer;" data-color="Green"></div>
+      <div class="color-circle" style="width: 30px; height: 30px; background-color: black; border-radius: 50%; cursor: pointer;" data-color="Black"></div>
+  </div>
+</div>
+
 
       <!-- Screen Size Filter Section -->
       <div class="mt-4">
@@ -242,50 +237,85 @@
               </div>
           
               <script>
-                  const productGrid = document.getElementById("productGrid");
-          
-                  // Function to render products dynamically
-                  function renderProducts(products) {
-                      productGrid.innerHTML = ""; // Clear existing products
-                      products.forEach(product => {
-                          const card = document.createElement("div");
-                          card.className = "col-md-4";
-                          card.innerHTML = `
-                              <div class="card">
-                                  <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                                  <div class="card-body">
-                                      <h5 class="card-title">${product.name}</h5>
-                                      <p class="card-text">Category: ${product.category}</p>
-                                      <p class="card-text">Price: $${product.price}</p>
-                                      
-                                  </div>
-                              </div>
-                          `;
-                          productGrid.appendChild(card);
-                      });
-                  }
-          
-                  // Fetch data from JSON file
-                  fetch("data.json")
-                      .then(response => response.json())
-                      .then(data => {
-                          const products = data.products;
-          
-                          // Initial render
-                          renderProducts(products);
-          
-                          // Filter functionality
-                          document.getElementById("filterPhone").addEventListener("change", (e) => {
-                              if (e.target.checked) {
-                                  const filteredProducts = products.filter(product => product.category === "Phone");
-                                  renderProducts(filteredProducts);
-                              } else {
-                                  renderProducts(products);
-                              }
-                          });
-                      })
-                      .catch(error => console.error("Error loading JSON data:", error));
-              </script>
+                const productGrid = document.getElementById("productGrid");
+            
+                // Initial products data
+                let products = [];
+            
+                // Function to render products dynamically
+                function renderProducts(filteredProducts) {
+                    productGrid.innerHTML = ""; // Clear existing products
+                    filteredProducts.forEach(product => {
+                        const card = document.createElement("div");
+                        card.className = "col-md-4";
+                        card.innerHTML = `
+                            <div class="card">
+                                <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${product.name}</h5>
+                                    <p class="card-text">Category: ${product.category}</p>
+                                     <p class="card-text">color: ${product.color}</p>
+                                    <p class="card-text">Price: $${product.price}</p>
+                                </div>
+                            </div>
+                        `;
+                        productGrid.appendChild(card);
+                    });
+                }
+            
+                // Function to apply all selected filters
+                function applyFilters() {
+                    let filteredProducts = products;
+            
+                    // Filter by category
+                    const selectedCategories = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+                    if (selectedCategories.length > 0) {
+                        filteredProducts = filteredProducts.filter(product => selectedCategories.includes(product.category));
+                    }
+            
+                    // Filter by price
+                    const priceRange = document.getElementById("priceRange");
+                    const minPrice = parseInt(priceRange.min);
+                    const maxPrice = parseInt(priceRange.max);
+                    const priceValue = parseInt(priceRange.value);
+                    filteredProducts = filteredProducts.filter(product => product.price >= minPrice && product.price <= priceValue);
+            
+                    // Filter by color (optional, needs product data to have color info)
+                    // This example assumes the products have a `color` field.
+                    const selectedColor = Array.from(document.querySelectorAll('.color-circle.active')).map(circle => circle.dataset.color);
+                    if (selectedColor.length > 0) {
+                        filteredProducts = filteredProducts.filter(product => selectedColor.includes(product.color));
+                    }
+            
+                    // Render the filtered products
+                    renderProducts(filteredProducts);
+                }
+            
+                // Fetch data from JSON file
+                fetch("data.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        products = data.products;
+            
+                        // Initial render
+                        renderProducts(products);
+            
+                        // Add event listeners for filters
+                        document.querySelectorAll('input[type="checkbox"], #priceRange').forEach(input => {
+                            input.addEventListener("change", applyFilters);
+                        });
+            
+                        // Handle color filter (click to toggle active class)
+                        document.querySelectorAll('.color-circle').forEach(circle => {
+                            circle.addEventListener("click", () => {
+                                circle.classList.toggle("active");
+                                applyFilters(); // Reapply filters when color is selected/deselected
+                            });
+                        });
+                    })
+                    .catch(error => console.error("Error loading JSON data:", error));
+            </script>
+            
           
         </div>
     </div>
